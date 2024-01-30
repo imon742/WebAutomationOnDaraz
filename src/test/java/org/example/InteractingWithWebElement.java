@@ -11,7 +11,7 @@ public class InteractingWithWebElement extends DriverSetup {
         browser.get("https://trytestingthis.netlify.app");
         WebElement firstNameInputBox = browser.findElement(By.xpath("//input[@id='fname']"));
         firstNameInputBox.sendKeys("Hello World");
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         //firstNameInputBox.clear();
 
@@ -19,7 +19,7 @@ public class InteractingWithWebElement extends DriverSetup {
 
         lastNameInputBox.sendKeys("Now going to click on male");
 
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         //Getting value of the attribute
 
@@ -37,16 +37,16 @@ public class InteractingWithWebElement extends DriverSetup {
         browser.findElement(By.xpath("//input[@id='male']")).click();
 
         lastNameInputBox.clear();
-        Thread.sleep(2000);
+        Thread.sleep(200);
         lastNameInputBox.sendKeys("Now Female");
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         browser.findElement(By.xpath("//label[normalize-space()='Female']")).click();
 
         lastNameInputBox.clear();
-        Thread.sleep(2000);
+        Thread.sleep(200);
         lastNameInputBox.sendKeys("Now Other");
-        Thread.sleep(2000);
+        Thread.sleep(200);
 
         browser.findElement(By.xpath("//label[normalize-space()='Other']")).click();
 
@@ -76,17 +76,40 @@ public class InteractingWithWebElement extends DriverSetup {
         Boolean isMaleDisplayed = browser.findElement(By.xpath("//input[@id='male']")).isDisplayed();
         System.out.println(isMaleDisplayed);
 
+        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
+
+        Boolean displayed = browser.findElement(By.xpath("//input[@id='displayed-text']")).isDisplayed();
+        System.out.println("Before Clicking Hide: "+displayed);
+
+        browser.findElement(By.xpath("//input[@id='hide-textbox']")).click();
+
+        //Using same displayed variable twice to take value of same filed
+
+        displayed = browser.findElement(By.xpath("//input[@id='displayed-text']")).isDisplayed();
+        System.out.println("After  Clicking Hide: "+displayed);
+
+        //Checking Enable or not
+
+        Boolean enableCheck = browser.findElement(By.xpath("//input[@id='displayed-text']")).isEnabled();
+
+        System.out.println("Checking Enable or Not : "+ enableCheck);
 
 
+        // Checking Is selected or not
 
 
+        Boolean select = browser.findElement(By.xpath("//input[@id='checkBoxOption1']")).isSelected();
+        System.out.println("Before selecting:"+ select);
 
+        browser.findElement(By.xpath("//input[@id='checkBoxOption1']")).click();
 
+        Thread.sleep(100);
 
+        select = browser.findElement(By.xpath("//input[@id='checkBoxOption1']")).isSelected();
+        System.out.println("After selecting:"+ select);
 
 
         Thread.sleep(5000);
-
 
 
 
