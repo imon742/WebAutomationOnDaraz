@@ -85,8 +85,6 @@ public class GetNavigate extends DriverSetup{
         System.out.println("This is current URL: "+browser.getCurrentUrl());
 
 
-        browser.close();
-
 
 
         Thread.sleep(4000);
