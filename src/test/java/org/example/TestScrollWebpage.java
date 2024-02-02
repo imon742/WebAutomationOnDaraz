@@ -24,13 +24,7 @@ public class TestScrollWebpage extends DriverSetup {
 
         js.executeScript("arguments[0].scrollIntoView();", hover);
 
-        Thread.sleep(2000);
 
-        Actions actions = new Actions(browser);
-
-        actions.scrollToElement(browser.findElement(By.xpath("//a[@class='blinkingText']")));
-        Thread.sleep(2000);
-        actions.scrollByAmount(0, 1000);
         Thread.sleep(2000);
 
 
