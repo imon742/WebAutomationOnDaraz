@@ -16,7 +16,7 @@ public class DiffrentWait extends DriverSetup{
 
         Thread.sleep(10000);
 
-        //Switching to alert and accept it
+        //Switching to alert and accept it  
 
         Alert alert = browser.switchTo().alert();
         alert.accept();
