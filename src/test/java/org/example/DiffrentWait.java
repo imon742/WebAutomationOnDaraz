@@ -10,12 +10,14 @@ public class DiffrentWait extends DriverSetup{
     public void testDiffrentWait() throws InterruptedException {
 
         browser.get("https://qavbox.github.io/demo/alerts/");
-        
+
         browser.findElement(By.id("delayalert")).click();
 
         //heard sleep to stop java execution for fixed amount of time
 
         Thread.sleep(10000);
+
+
 
         //Switching to alert and accept it  
 
