@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 public class TestScrollWebpage extends DriverSetup {
     @Test
     public void testScroll() throws InterruptedException {
+        
 
         browser.get("https://rahulshettyacademy.com/AutomationPractice/");
 
