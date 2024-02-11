@@ -3,10 +3,9 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class TestScrollWebpage extends DriverSetup {
+public class All extends DriverSetup {
     @Test
     public void testScroll() throws InterruptedException {
 
