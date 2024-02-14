@@ -70,10 +70,36 @@ public class Test_IFrameElement extends DriverSetup{
         browser.switchTo().defaultContent();
         System.out.println(hoverButton.getText());
 
+
+
         //Switching to frame with different method without index
 
         browser.switchTo().frame("courses-iframe");
+
+        //Multiple frame thake jodi.
+        //if iFrame er vitore arekta iFrame thake then 2nd iFrame theke 1st iFrame a back korar jnno parent content use korte hbe
+        //browser.switchTo().parentFrame()
         System.out.println(browser.findElement(By.xpath("(//a[@href=\"https://courses.rahulshettyacademy.com/sign_up\"])[1]")).getText());
+
+
+/*
+        1
+        2 1 2
+        3 1 2 3
+        ami ekhn     3 number iframe er vitor 2 number Iframe e jabo
+
+         browser.switchTo().frame(3);
+
+        3 number pawyar pore then 3 er 2 e jaite hbe
+
+        browser.switchTo().frame(2);
+         eikhan theke parent frame 3 er asar jnno
+        browser.switchTo().parentFrame();
+           Ar main website a asar jnno
+        browser.switchTo().defaultContent()
+
+ */
+
 
 
 
