@@ -28,6 +28,7 @@ public class SoftAndHardAssertion extends DriverSetup {
         System.out.println("Print C");
         softAssert.assertTrue(false);
         System.out.println("Print D");
+        System.out.println("Print D");
 
 
         softAssert.assertAll(); //assert all na dile report e asbe na but sob kisu normally run hobe,
