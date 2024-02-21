@@ -25,6 +25,10 @@ public class DiffrentWait extends DriverSetup{
         browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//This is an implicit wait (Dynamic wait. Driver e ekbar manage kore dile jdi kuno exception pay seita solve hoy kina tar jnno wait korbe upto jotokhon ami bolbo)-> No such elements exception dbe.
 
 
+
+
+
+
         WebDriverWait wait = new WebDriverWait(browser, Duration.ofSeconds(10));
 
 
