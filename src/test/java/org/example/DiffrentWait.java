@@ -3,6 +3,9 @@ package org.example;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -30,6 +33,8 @@ public class DiffrentWait extends DriverSetup{
 
 
         WebDriverWait wait = new WebDriverWait(browser, Duration.ofSeconds(10));
+        .....
+        wait.until(ExpectedConditions.alertIsPresent());
 
 
 
@@ -48,18 +53,26 @@ public class DiffrentWait extends DriverSetup{
 
         // Code section.
 
+        browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//Element pawyar ag porjonto wait korbe
+
+        WebDriverWait wait = new WebDriverWait(browser, Duration.ofSeconds(10));//Alert pawyar ag porjonto wait korbe . Upto 10 sec.
+
         browser.get("https://qavbox.github.io/demo/alerts/");
-        browser.findElement(By.id("delayalert")).click();
-        Thread.sleep(10000);
 
-        browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement delay_alert_Button = wait.until(ExpectedConditions.elementToBeClickable(By.id("delayalert")));
 
-        WebDriverWait wait = new WebDriverWait(browser, Duration.ofSeconds(10));
+        delay_alert_Button.click();
 
+        //browser.findElement(By.id("delayalert")).click();
+
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+
+        //Thread.sleep(10000);
 
         //Switching to alert and accept it
 
-        Alert alert = browser.switchTo().alert();
+        //Alert alert = browser.switchTo().alert();
         alert.accept();
 
 
