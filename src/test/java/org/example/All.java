@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+
 public class All extends DriverSetup {
     @Test
     public void testScroll() throws InterruptedException {
@@ -26,6 +27,28 @@ public class All extends DriverSetup {
 
 
         Thread.sleep(2000);
+
+
+    }
+    @Test
+    public void rokomariTrial() throws InterruptedException{
+
+        browser.get("https://www.rokomari.com/");
+        //popup Add
+        browser.findElement(By.xpath("//div[@id='js--entry-popup']//i[@class='ion-close-round']")).click();
+        //bike add
+        browser.findElement(By.xpath("//span[@aria-hidden='true']")).click();
+        browser.findElement(By.xpath("//a[contains(text(),'হুমায়ূন আহমেদ')]")).click();
+        browser.findElement(By.xpath("//a[@id='js--authors']")).click();
+        browser.findElement(By.xpath(""))
+
+
+
+        Thread.sleep(3000);
+
+
+
+
 
 
     }
