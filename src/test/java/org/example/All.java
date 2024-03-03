@@ -38,9 +38,10 @@ public class All extends DriverSetup {
         browser.findElement(By.xpath("//div[@id='js--entry-popup']//i[@class='ion-close-round']")).click();
         //bike add
         browser.findElement(By.xpath("//span[@aria-hidden='true']")).click();
-        browser.findElement(By.xpath("//a[contains(text(),'হুমায়ূন আহমেদ')]")).click();
+        //browser.findElement(By.xpath("//a[contains(text(),'হুমায়ূন আহমেদ')]")).click();
         browser.findElement(By.xpath("//a[@id='js--authors']")).click();
-        browser.findElement(By.xpath(""))
+        browser.findElement(By.xpath("//input[@id='authorsearch']")).sendKeys("হুমায়ূন আহমেদ");
+        browser.findElement(By.xpath("//button[@class='btn btnSearchSubmit']//i[@class='fa fa-search']")).click();
 
 
 
