@@ -55,16 +55,16 @@ public class All extends DriverSetup {
         //bike add
 
         browser.findElement(By.xpath("//span[@aria-hidden='true']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         //Click on filter
 
         WebElement scroll2instock = browser.findElement(By.xpath("//label[@for='instock']"));
 
         js.executeScript("arguments[0].scrollIntoView();", scroll2instock);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         browser.findElement(By.xpath("//label[@for='rok-filter-categoryIds-677']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
 //        WebElement scroll2হুমায়ূন_আহমেদ_এর_বই_সমূহ = browser.findElement(By.xpath("//h1[contains(text(),'হুমায়ূন আহমেদ এর বই সমূহ')]"));
 
@@ -73,24 +73,27 @@ public class All extends DriverSetup {
         js.executeScript("window.scrollBy(0,500)" );
         Thread.sleep(3000);
 
+        //bike add
 
+        browser.findElement(By.xpath("//span[@aria-hidden='true']")).click();
+        Thread.sleep(1000);
         //select "rochona"
 
         WebElement ClickRochona = browser.findElement(By.xpath("//label[contains(text(),'রচনা সংকলন ও সমগ্র')]"));
         ClickRochona.click();
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 
         //scroll down
 
         WebElement Find = browser.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/section[3]/div[2]/div[1]/div[59]/div[1]/a[1]/div[1]/img[1]"));
         js.executeScript("arguments[0].scrollIntoView()", Find);
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 
         //goto next page
 
         WebElement ClickNextPage = browser.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/section[3]/div[3]/a[1]"));
         ClickNextPage.click();
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 //Add hover
 //        actions.clickAndHold(browser.findElement(By.xpath("//div[@title='বাসর হুমায়ূন আহমেদ']//div[1]//div[3]"))).clickAndHold().build().perform();
 //
@@ -100,22 +103,25 @@ public class All extends DriverSetup {
 
         WebElement HoverBook = browser.findElement(By.xpath("//h4[contains(text(),'সাজঘর')]"));
         actions.moveToElement(HoverBook).perform();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         //select add to cart
 
         WebElement ClickAddToCart = browser.findElement(By.xpath("//body/div[7]/div[1]/div[1]/div[1]/section[3]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/div[3]/button[1]"));
         ClickAddToCart.click();
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 //Click on cart
         browser.findElement(By.xpath("//a[@id='js-cart-menu']//*[name()='svg']")).click();
 
-        browser.findElement(By.xpath("//a[@id='js-cart-menu']//*[name()='svg']")).click();
+        //browser.findElement(By.xpath("//a[@id='js-cart-menu']//*[name()='svg']")).click();
+        actions.scrollToElement(browser.findElement(By.xpath("//img[@alt='trash']")));
 
+        System.out.println(browser.findElement(By.xpath("//span[normalize-space()='Place Order']")).getText());
         browser.findElement(By.xpath("//span[normalize-space()='Place Order']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
+
 
     }
     @Test
